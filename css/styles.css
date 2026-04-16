@@ -121,19 +121,22 @@ nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  background: rgba(10,10,10,0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(10,10,10,0.82);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow:
+    0 1px 0 rgba(240,180,41,0.18),
+    0 4px 24px rgba(0,0,0,0.5);
 }
 
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 18px 40px;
+  padding: 16px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 
 .logo {
@@ -142,8 +145,25 @@ nav {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
+  flex-shrink: 0;
 }
 .logo span { color: var(--text); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex: 1;
+  justify-content: center;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-3);
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--text-2); }
 
 .nav-cta {
   background: var(--accent);
@@ -154,6 +174,7 @@ nav {
   text-transform: uppercase;
   padding: 9px 20px;
   border-radius: var(--radius-sm);
+  flex-shrink: 0;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
 .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
@@ -232,42 +253,70 @@ nav {
   font-size: 18px;
   color: var(--text-2);
   max-width: 500px;
-  margin: 0 auto 44px;
+  margin: 0 auto 32px;
   line-height: 1.7;
   opacity: 0;
   animation: fadeUp 0.7s 0.4s ease forwards;
 }
 
-.app-store-btn {
-  display: inline-flex;
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  background: var(--accent);
-  color: var(--bg);
-  padding: 16px 32px;
-  border-radius: var(--radius-md);
-  font-weight: 800;
-  font-size: 16px;
-  letter-spacing: -0.01em;
-  transition: opacity 0.15s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0 0 0 rgba(240,180,41,0);
+  gap: 12px;
   opacity: 0;
   animation: fadeUp 0.7s 0.55s ease forwards;
 }
-.app-store-btn:hover {
-  opacity: 0.92;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(240,180,41,0.3);
+
+/* ── APPLE APP STORE BADGE ── */
+.app-store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 8px 20px 8px 14px;
+  transition: opacity 0.15s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
 }
-.app-store-btn svg { flex-shrink: 0; }
+.app-store-badge:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+.badge-apple-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.badge-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-align: left;
+  line-height: 1;
+}
+.badge-label-top {
+  font-size: 11px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+.badge-label-bottom {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
 
 .hero-sub {
   font-size: 12px;
   color: var(--text-3);
-  margin-top: 16px;
   letter-spacing: 0.03em;
-  opacity: 0;
-  animation: fadeUp 0.7s 0.65s ease forwards;
 }
 
 /* ── DIVIDER ── */
@@ -497,10 +546,8 @@ section.how-it-works {
   font-size: 16px;
   margin-bottom: 40px;
 }
-.final-cta .app-store-btn {
+.final-cta .app-store-badge {
   position: relative;
-  opacity: 1;
-  animation: none;
 }
 
 /* ── FOOTER ── */
@@ -566,6 +613,37 @@ footer {
   margin: 8px 0 16px;
 }
 .legal-page li { margin-bottom: 6px; }
+.legal-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  font-size: 14px;
+}
+.legal-page th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 12px 8px 0;
+}
+.legal-page td {
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+  vertical-align: top;
+}
+.legal-page td:first-child { color: var(--text); font-weight: 600; }
+.legal-page td a { color: var(--accent); }
+.legal-page td a:hover { text-decoration: underline; }
+.legal-page hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
