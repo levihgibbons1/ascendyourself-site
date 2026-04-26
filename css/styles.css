@@ -664,9 +664,48 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .nav-inner { padding: 16px 20px; }
-  .hero { padding: 130px 20px 80px; }
+  /* Nav: hide center links, keep logo + CTA */
+  .nav-inner {
+    padding: 14px 20px;
+    gap: 12px;
+  }
+  .nav-links { display: none; }
+  .nav-cta {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+
+  /* Hero */
+  .hero { padding: 110px 20px 72px; }
+  .hero p { font-size: 16px; }
+
+  /* Sections */
   .container { padding: 0 20px; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .features-grid, .steps { grid-template-columns: 1fr; }
+  section.features,
+  section.how-it-works { padding: 64px 0; }
+  .section-header { margin-bottom: 36px; }
+
+  /* Grids collapse to single column */
+  .features-grid,
+  .steps { grid-template-columns: 1fr; gap: 12px; }
+
+  /* Cards tighter padding */
+  .feature-card,
+  .step { padding: 24px 20px; }
+
+  /* Final CTA */
+  .final-cta { padding: 72px 20px; }
+
+  /* Footer */
+  footer { padding: 24px 20px; }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .footer-links { justify-content: center; flex-wrap: wrap; gap: 16px; }
+
+  /* Legal / FAQ pages */
+  .legal-page { padding: 100px 20px 60px; }
 }
