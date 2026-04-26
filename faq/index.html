@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Ascend AI</title>
+  <meta name="description" content="Frequently asked questions about Ascend AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .faq-list {
+      margin-top: 48px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: left;
+      padding: 20px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      line-height: 1.4;
+    }
+    .faq-question:hover {
+      color: var(--accent);
+    }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .faq-icon svg {
+      transition: transform 0.25s ease;
+    }
+    .faq-item.open .faq-icon {
+      border-color: var(--accent);
+      background: rgba(240, 180, 41, 0.08);
+    }
+    .faq-item.open .faq-icon svg {
+      transform: rotate(45deg);
+    }
+    .faq-item.open .faq-question {
+      color: var(--accent);
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 0 24px;
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.75;
+    }
+    .faq-answer.visible {
+      display: block;
+    }
+    .faq-answer ul {
+      padding-left: 20px;
+      margin: 8px 0 0;
+    }
+    .faq-answer li {
+      margin-bottom: 6px;
+    }
+    .faq-answer em {
+      color: var(--text);
+      font-style: normal;
+      font-weight: 500;
+    }
+    .faq-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 48px 0 0;
+    }
+    .faq-section-label:first-child {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-6"></div>
+  </div>
+
+  <div class="page-content">
+
+    <nav>
+      <div class="nav-inner">
+        <a href="/" class="logo">Ascend <span>AI</span></a>
+        <div class="nav-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+        <a href="https://apps.apple.com" class="nav-cta" target="_blank" rel="noopener">Download App</a>
+      </div>
+    </nav>
+
+    <div class="legal-page">
+      <a href="/" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+
+      <h1>Frequently Asked Questions</h1>
+      <p class="updated">Everything you need to know about Ascend AI.</p>
+
+      <div class="faq-list">
+
+        <p class="faq-section-label">How it works</p>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How does Ascend AI work?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            Upload a selfie, get an AI-powered facial analysis with a personalized score (1–100), and receive daily improvement tasks tailored to your goals. Rescan anytime to track progress.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is the AI analysis based on?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            Our AI uses advanced vision analysis to evaluate facial structure, skin quality, symmetry, and grooming across key categories: jawline, skin, hair, style, and fitness. You get specific, actionable improvements — not generic advice.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What categories does the app analyze?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <ul>
+              <li>Skin (hydration, clarity, texture)</li>
+              <li>Hair (grooming, style, health)</li>
+              <li>Jawline (definition, symmetry)</li>
+              <li>Style (fashion, grooming, products)</li>
+              <li>Fitness (posture, muscle definition)</li>
+              <li><em>More categories coming soon</em></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is this just another gym app?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            No. Ascend AI focuses on appearance improvement holistically — skin care, grooming, style, posture, fitness. It's a personalized appearance coach, not a workout tracker.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is Ascend AI available on Android?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            Currently iOS only. Android coming soon.
+          </div>
+        </div>
+
+        <p class="faq-section-label">Your score &amp; results</p>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is the score accurate?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            The score is a personalized benchmark for <em>your</em> improvement journey, not a judgment. We compare your results over time to show real progress. Most users see measurable improvements within weeks.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What if I disagree with my score?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            The score is a starting point. Your real metric is progress — whether your routine is moving the needle. Many users improve significantly, and that's what matters.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long before I see results?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            Most users see visible progress in 2–4 weeks of consistent daily tasks. Dramatic changes take 8–12 weeks. Consistency matters more than intensity.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I retake my analysis?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            Yes, anytime. Rescan daily or weekly to track how your routine is working and adjust as needed.
+          </div>
+        </div>
+
+        <p class="faq-section-label">Privacy &amp; data</p>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you store my photos?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            No. Photos are processed for analysis and permanently deleted immediately after. We never store selfies or use them for any purpose beyond your analysis.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How is my data secure?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            All data is encrypted in transit and at rest. Photos are deleted immediately after analysis. We follow industry-standard security practices and never sell your data.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I delete my account?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            You can delete your account anytime in Settings → Account → Delete Account. This permanently removes all your data and cannot be undone.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I export my data?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            Yes. Download your analysis history and progress data anytime from Settings → Data Export (delivered within 24 hours).
+          </div>
+        </div>
+
+        <p class="faq-section-label">Subscription &amp; billing</p>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What's included in a subscription?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <ul>
+              <li>Unlimited AI analyses (rescan anytime)</li>
+              <li>Personalized daily tasks (3 per day)</li>
+              <li>Progress tracking (30-day trend, achievements)</li>
+              <li>Custom routines based on your improvements</li>
+              <li>All future features</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is there a free trial?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            Yes. 3 days free on both monthly and yearly plans. Credit card required to start — you won't be charged during the trial. Cancel anytime before day 3 to avoid charges.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What payment methods do you accept?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            We accept all major credit cards, debit cards, and Apple Pay through secure payment processing.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I cancel anytime?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            Yes. Monthly plans cancel immediately with no penalty. Yearly plans can be cancelled anytime — you retain access through your renewal date.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What if the app doesn't work for me?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            If you're not satisfied within 7 days, contact support for a full refund — no questions asked.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <a href="/" class="logo">Ascend <span>AI</span></a>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+        <p class="footer-copy">© 2026 Ascend AI. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.faq-answer').classList.remove('visible');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
